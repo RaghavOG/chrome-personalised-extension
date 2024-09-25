@@ -83,3 +83,12 @@ body {
 #stopwatch p, #water-counter p {
     margin: 0; /* Remove default margin for a cleaner look */
 }
+
+#tab-counter {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+    color: #f5f5f5; /* Color for visibility */
+}
+
