@@ -68,6 +68,10 @@ function updateTime() {
     "Believe in yourself so strongly that the world can't help but believe in you too. – Anonymous",
 ];
 
+// document.getElementById("todo-button").addEventListener("click", function () {
+//     window.open("todo.html", "To-Do List", "width=400,height=600");
+// });
+
   
   // Function to display a random quote
   function displayRandomQuote() {
@@ -207,4 +211,35 @@ function updateTime() {
   // 
   // // Button to trigger speed test
   // document.getElementById("check-speed").addEventListener("click", checkInternetSpeed);
+  
+  let todoWindow = null;
+
+  // Function to open the To-Do window
+  document.getElementById("todo-button").addEventListener("click", function () {
+      const screenWidth = window.screen.width;
+      const screenHeight = window.screen.height;
+      const width = 600;
+      const height = 600;
+  
+      const left = (screenWidth - width) / 2;
+      const top = ((screenHeight - height) / 2) - 50;
+  
+      todoWindow = window.open("todo.html", "To-Do List", `width=${width},height=${height},left=${left},top=${top}`);
+  });
+  
+  // Close To-Do window on Escape key press
+//   document.addEventListener("keydown", function (e) {
+//       if (e.key === "Escape" && todoWindow) {
+//           todoWindow.close(); // Close the new window
+//           todoWindow = null;  // Reset the reference after closing
+//       }
+//   });
+  
+  // Close To-Do window when the main window loses focus (tab switch)
+//   window.addEventListener("blur", function () {
+//       if (todoWindow) {
+//           todoWindow.close(); // Close the new window
+//           todoWindow = null;  // Reset the reference after closing
+//       }
+//   });
   

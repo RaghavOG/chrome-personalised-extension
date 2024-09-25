@@ -1,13 +1,16 @@
+/* General Styles */
 body {
     margin: 0;
     height: 100vh;
     display: flex;
-    flex-direction: column; /* Changed to column to stack elements vertically */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     font-family: Arial, sans-serif;
     background-color: #121212;
     color: #f5f5f5;
+    padding: 10px; /* Added padding for better mobile view */
+    box-sizing: border-box;
 }
 
 #time-container {
@@ -15,7 +18,7 @@ body {
 }
 
 #time {
-    font-size: 180px;  /* Large font for time */
+    font-size: 180px;  
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -24,18 +27,18 @@ body {
     font-size: 24px;
     font-style: italic;
     color: #bbbbbb;
-    margin-bottom: 40px; /* Space below quote */
+    margin-bottom: 40px;
 }
 
 #date {
-    font-size: 108px; /* Smaller font size for date */
-    color: #cccccc; /* Optional: color for date */
+    font-size: 108px;
+    color: #cccccc;
 }
 
 /* Water Counter Section */
 #water-counter {
     position: fixed;
-    bottom: 20px; /* Adjusted position for visibility */
+    bottom: 20px;
     left: 20px;
     font-size: 18px;
 }
@@ -79,9 +82,9 @@ body {
     background-color: #0056b3;
 }
 
-/* Additional Styles (Optional) */
+/* Additional Styles */
 #stopwatch p, #water-counter p {
-    margin: 0; /* Remove default margin for a cleaner look */
+    margin: 0;
 }
 
 #tab-counter {
@@ -89,6 +92,75 @@ body {
     top: 20px;
     left: 20px;
     font-size: 18px;
-    color: #f5f5f5; /* Color for visibility */
+    color: #f5f5f5;
 }
 
+/* To-Do List Button Styles */
+#todo-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+#todo-button:hover {
+    background-color: #218838;
+}
+
+#todo-button:active {
+    background-color: #1e7e34;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    /* Adjust time font size for tablets */
+    #time {
+        font-size: 120px;
+    }
+
+    #date {
+        font-size: 72px;
+    }
+
+    #quote {
+        font-size: 18px;
+    }
+
+    /* Move water counter and stopwatch above content for mobile */
+    #water-counter, #stopwatch {
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    /* Adjust To-Do button */
+    #todo-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust time font size for smartphones */
+    #time {
+        font-size: 80px;
+    }
+
+    #date {
+        font-size: 48px;
+    }
+
+    #quote {
+        font-size: 14px;
+    }
+
+    /* Smaller padding for buttons */
+    #start-stopwatch, #pause-stopwatch, #reset-stopwatch, #add-water, #todo-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
