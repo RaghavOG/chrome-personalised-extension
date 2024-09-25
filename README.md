@@ -34,7 +34,7 @@
 
 1. Clone the repository or download the ZIP file.
    ```
-   git clone https://github.com/RaghavOG/time-quote-extension.git
+   git clone https://github.com/RaghavOG/chrome-personalised-extension.git
    ```
 2. Open your browser (Brave, Chrome, or any Chromium-based browser).
 3. Navigate to `chrome://extensions/` in the browser address bar.
